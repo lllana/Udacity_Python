@@ -1,12 +1,9 @@
-n = 5
-
-def countdown():
-    global n
+def countdown(n):
     if n < 0:
         print("Blastoff!")
     else:
         print(n)
         n = n - 1
-        countdown()
+        countdown(n)
 
-countdown()
+countdown(10)
