@@ -11,5 +11,5 @@ verse_set = set(verse_list)
 print(verse_set, '\n')
 
 # print the number of unique words
-num_unique = len(verse_list) - len(verse_set)
+num_unique = len(verse_set)
 print(num_unique, '\n')
