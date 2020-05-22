@@ -19,6 +19,16 @@ for i in nominees:
 
 print("nom_count_dict = {}\n".format(nom_count_dict))
 
+### provided answer
+# nom_count_dict = {}
+# for year, list_dir in nominated.items():
+#     for director in list_dir:
+#         if director not in nom_count_dict:
+#             nom_count_dict[director] = 1
+#         else:
+#             nom_count_dict[director] += 1
+
+
 ### 1B: Create dictionary with the count of Oscar wins for each director
 win_count_dict = {}
 
@@ -37,4 +47,9 @@ for name in nominees:
     else:
         win_count_dict[name] = 1
 
-print("win_count_dict = {}".format(win_count_dict))
+# print("win_count_dict = {}".format(win_count_dict))
+#
+# win_count_dict = {}
+# for year, winnerlist in winners.items():
+#     for winner in winnerlist:
+#         win_count_dict[winner] = win_count_dict.get(winner, 0) + 1
