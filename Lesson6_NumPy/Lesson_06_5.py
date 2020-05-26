@@ -32,4 +32,4 @@ print('w = \n', w)
 
 # We print v
 print()
-print('v = \n', v)
+print('v = \n', v) 
