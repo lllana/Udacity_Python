@@ -1,4 +1,4 @@
-# # function that creates a flower_dictionary from filename
+# function that creates a flower_dictionary from filename
 # def create_flowerdict(filename):
 #     flower_dict = {}
 #     with open(filename) as f:
@@ -25,7 +25,7 @@
 
 def cast_flower_dict(filename):
     flower_dict = {}
-    with open('flowers.txt','r') as f:
+    with open('flower.txt','r') as f:
         for line in f:
             line_data = line.split(":")
 
@@ -39,8 +39,7 @@ def contained_letter_flower(ask_name):
     letter = ask_name[:1]
     flower = flower_create.get(letter)
     return flower
-
-### Data parsing
+### Data parsingask_name = str(input("Enter your First [space] Last name only: "))ask_name = str(input("Enter your First [space] Last name only: "))
 flower_create = cast_flower_dict('flower.txt')
 
 ### User's input
