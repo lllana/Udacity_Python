@@ -139,7 +139,7 @@ def trip_duration_stats(df):
     mean_travel_time_sec = df['Trip Duration'].mean()
     mean_travel_time_min = mean_travel_time_sec / 60
     
-    print('Mean travel time in sec: ', mean_travel_time)
+    print('Mean travel time in sec: ', mean_travel_time_sec)
     print('Mean travel time in min: ', mean_travel_time_min)
 
 
