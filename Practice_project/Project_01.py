@@ -17,7 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = (str(input("Would you like to see the data for Chicago, New York or Washington? "))).lower()
+    city = (str(input("Would you like to see the data for Chicago, New York City or Washington? "))).lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = (str(input("What month would you like to get the data for? All, January, February, March, April, May, June? "))).lower()
@@ -141,9 +141,9 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print("User types are: ", user_types)
 
-    # TO DO: Display counts of gender
-    gender_counts = df['User Type'].value_counts()
-    print("User types are: ", gender_counts)
+    # TO DO: Display counts of genderno
+    gender_counts = df['Gender'].value_counts()
+    print("Gender counts are: ", gender_counts)
 
     # TO DO: Display earliest, most recent, and most common year of birth
     earliest_year = df['Birth Year'].min()
