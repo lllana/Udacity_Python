@@ -6,6 +6,9 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+GENDER_COL = "Gender"
+BIRTH_YEAR_COL = "Birth Year"   
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -157,19 +160,19 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print("User types are: ", user_types)
     
-    if "Gender" in df.columns:
+    if GENDER_COL and BIRTH_YEAR_COL in df.columns:
         # TO DO: Display counts of genderno
-        gender_counts = df['Gender'].value_counts()
+        gender_counts = df[GENDER_COL].value_counts()
         print("Gender counts are: ", gender_counts)
 
         # TO DO: Display earliest, most recent, and most common year of birth
-        earliest_year = df['Birth Year'].min()
+        earliest_year = df[BIRTH_YEAR_COL].min()
         print("The earliest year of birth: ", earliest_year)
 
-        most_recent_year = df['Birth Year'].max()
+        most_recent_year = df[BIRTH_YEAR_COL].max()
         print("The most recent year of birth: ", most_recent_year)
 
-        most_common_year = df['Birth Year'].mode()[0]
+        most_common_year = df[BIRTH_YEAR_COL].mode()[0]
         print("The most common year of birth: ", most_common_year)
     else:
         print("Gender data is not available for Washington")
@@ -194,8 +197,8 @@ def main():
         pd.set_option('display.max_columns',200)
         while True:            
             if raw == 'no':
-                break
-            print(df[i:i+5])
+                break   
+            print(df[i: i + 5])
             raw = input('\nWould you like to see next rows of raw data?\n').lower()
             i += 5   
         restart = input('\nWould you like to restart? Type \'yes\' or \'no\'.\n').lower()
